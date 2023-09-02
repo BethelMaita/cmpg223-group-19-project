@@ -84,10 +84,23 @@ namespace cmpg223_project
             empEmail = eEmail.Text;
 
             // employee signup button 
-            conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bethel\Documents\@NWU\SECOND SEMESTER\CMPG223\final project\cmpg223 project\DevTrackerDB.mdf"";Integrated Security=True");
-            conn.Open();
+            try
+            {
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bethel\Documents\@NWU\SECOND SEMESTER\CMPG223\final project\cmpg223 project\DevTrackerDB.mdf"";Integrated Security=True");
+                conn.Open();
+                command = new SqlCommand("Insert into Emplyees Values(" + employeeID + ", ' " + employeeFname+ "', '" + employeeLName + "', '" + employeeCellnr + "', '" + empEmail + "') ", conn);
 
-            conn.Close();
+                adapter = new SqlDataAdapter();
+                adapter.InsertCommand = command;
+                adapter.InsertCommand.ExecuteNonQuery();
+                MessageBox.Show("Sign UP Successful");
+
+                conn.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void eName_TextChanged(object sender, EventArgs e)
@@ -105,15 +118,41 @@ namespace cmpg223_project
 
 
             // cleints/company sign up
-            conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bethel\Documents\@NWU\SECOND SEMESTER\CMPG223\final project\cmpg223 project\DevTrackerDB.mdf"";Integrated Security=True");
-            conn.Open();
-            command = new SqlCommand("Insert into Clients Values(' "+)");
-            conn.Close();
+            try
+            {
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bethel\Documents\@NWU\SECOND SEMESTER\CMPG223\final project\cmpg223 project\DevTrackerDB.mdf"";Integrated Security=True");
+                conn.Open();
+                command = new SqlCommand("Insert into Clients Values(" + clientID + ", ' " + companyname + "', '" + clientEmail + "', '" + clientCellnr+ "', '" +cleintFname+ "' , '" +clientLName+ "') ", conn);
+
+                adapter = new SqlDataAdapter();
+                adapter.InsertCommand = command;
+                adapter.InsertCommand.ExecuteNonQuery();
+                MessageBox.Show("Sign UP Successful");
+
+                conn.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);    
+            }
         }
 
         private void generateID_Click(object sender, EventArgs e)
         {
+            var random = new Random();
+            employeeID = random.Next(1,1000);
 
+            var random2 = new Random();
+            clientID = random2.Next(1001, 2000);
+
+            if (checkBox1.Checked)
+            {
+                IDtxt.Text = employeeID.ToString();
+            }
+            else
+            {
+                IDtxt.Text= clientID.ToString();
+            }
         }
     }
 }

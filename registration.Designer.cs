@@ -29,33 +29,33 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.eFName = new System.Windows.Forms.TextBox();
-            this.eLName = new System.Windows.Forms.TextBox();
-            this.eNr = new System.Windows.Forms.TextBox();
-            this.cCompanyname = new System.Windows.Forms.TextBox();
-            this.cEmail = new System.Windows.Forms.TextBox();
-            this.cNr = new System.Windows.Forms.TextBox();
+            this.eEmail = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.empSignUP = new System.Windows.Forms.Button();
+            this.eNr = new System.Windows.Forms.TextBox();
+            this.eLName = new System.Windows.Forms.TextBox();
+            this.eFName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cFName = new System.Windows.Forms.TextBox();
+            this.cLName = new System.Windows.Forms.TextBox();
             this.clientsSignUP = new System.Windows.Forms.Button();
+            this.cNr = new System.Windows.Forms.TextBox();
+            this.cEmail = new System.Windows.Forms.TextBox();
+            this.cCompanyname = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.eEmail = new System.Windows.Forms.TextBox();
-            this.cLName = new System.Windows.Forms.TextBox();
-            this.cFName = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.generateID = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.IDtxt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -80,6 +80,82 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Employees ";
             // 
+            // eEmail
+            // 
+            this.eEmail.Location = new System.Drawing.Point(207, 225);
+            this.eEmail.Name = "eEmail";
+            this.eEmail.Size = new System.Drawing.Size(100, 22);
+            this.eEmail.TabIndex = 8;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(144, 231);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 16);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Email: ";
+            // 
+            // empSignUP
+            // 
+            this.empSignUP.Location = new System.Drawing.Point(110, 283);
+            this.empSignUP.Name = "empSignUP";
+            this.empSignUP.Size = new System.Drawing.Size(107, 46);
+            this.empSignUP.TabIndex = 6;
+            this.empSignUP.Text = "Sign Up";
+            this.empSignUP.UseVisualStyleBackColor = true;
+            this.empSignUP.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // eNr
+            // 
+            this.eNr.Location = new System.Drawing.Point(207, 174);
+            this.eNr.Name = "eNr";
+            this.eNr.Size = new System.Drawing.Size(100, 22);
+            this.eNr.TabIndex = 5;
+            // 
+            // eLName
+            // 
+            this.eLName.Location = new System.Drawing.Point(207, 115);
+            this.eLName.Name = "eLName";
+            this.eLName.Size = new System.Drawing.Size(100, 22);
+            this.eLName.TabIndex = 4;
+            // 
+            // eFName
+            // 
+            this.eFName.Location = new System.Drawing.Point(207, 59);
+            this.eFName.Name = "eFName";
+            this.eFName.Size = new System.Drawing.Size(100, 22);
+            this.eFName.TabIndex = 3;
+            this.eFName.TextChanged += new System.EventHandler(this.eName_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(82, 174);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Contact Number: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(116, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Last Name:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(116, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "First Name:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label10);
@@ -100,113 +176,37 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Clients";
             // 
-            // label1
+            // label10
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(116, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "First Name:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(143, 86);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 16);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Last Name: ";
             // 
-            // label2
+            // label9
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(116, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Last Name:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(143, 46);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 16);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "First Name: ";
             // 
-            // label3
+            // cFName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(82, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Contact Number: ";
+            this.cFName.Location = new System.Drawing.Point(229, 40);
+            this.cFName.Name = "cFName";
+            this.cFName.Size = new System.Drawing.Size(166, 22);
+            this.cFName.TabIndex = 8;
             // 
-            // label4
+            // cLName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 135);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Enter your company name: ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(114, 174);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 16);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Company email: ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(114, 207);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 16);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Contact Number: ";
-            // 
-            // eFName
-            // 
-            this.eFName.Location = new System.Drawing.Point(207, 59);
-            this.eFName.Name = "eFName";
-            this.eFName.Size = new System.Drawing.Size(100, 22);
-            this.eFName.TabIndex = 3;
-            this.eFName.TextChanged += new System.EventHandler(this.eName_TextChanged);
-            // 
-            // eLName
-            // 
-            this.eLName.Location = new System.Drawing.Point(207, 115);
-            this.eLName.Name = "eLName";
-            this.eLName.Size = new System.Drawing.Size(100, 22);
-            this.eLName.TabIndex = 4;
-            // 
-            // eNr
-            // 
-            this.eNr.Location = new System.Drawing.Point(207, 174);
-            this.eNr.Name = "eNr";
-            this.eNr.Size = new System.Drawing.Size(100, 22);
-            this.eNr.TabIndex = 5;
-            // 
-            // cCompanyname
-            // 
-            this.cCompanyname.Location = new System.Drawing.Point(229, 129);
-            this.cCompanyname.Name = "cCompanyname";
-            this.cCompanyname.Size = new System.Drawing.Size(166, 22);
-            this.cCompanyname.TabIndex = 3;
-            // 
-            // cEmail
-            // 
-            this.cEmail.Location = new System.Drawing.Point(229, 168);
-            this.cEmail.Name = "cEmail";
-            this.cEmail.Size = new System.Drawing.Size(166, 22);
-            this.cEmail.TabIndex = 4;
-            // 
-            // cNr
-            // 
-            this.cNr.Location = new System.Drawing.Point(229, 204);
-            this.cNr.Name = "cNr";
-            this.cNr.Size = new System.Drawing.Size(166, 22);
-            this.cNr.TabIndex = 5;
-            // 
-            // empSignUP
-            // 
-            this.empSignUP.Location = new System.Drawing.Point(110, 283);
-            this.empSignUP.Name = "empSignUP";
-            this.empSignUP.Size = new System.Drawing.Size(107, 46);
-            this.empSignUP.TabIndex = 6;
-            this.empSignUP.Text = "Sign Up";
-            this.empSignUP.UseVisualStyleBackColor = true;
-            this.empSignUP.Click += new System.EventHandler(this.button1_Click);
+            this.cLName.Location = new System.Drawing.Point(229, 80);
+            this.cLName.Name = "cLName";
+            this.cLName.Size = new System.Drawing.Size(166, 22);
+            this.cLName.TabIndex = 7;
             // 
             // clientsSignUP
             // 
@@ -217,6 +217,54 @@
             this.clientsSignUP.Text = "Sign Up";
             this.clientsSignUP.UseVisualStyleBackColor = true;
             this.clientsSignUP.Click += new System.EventHandler(this.clientsSignUP_Click);
+            // 
+            // cNr
+            // 
+            this.cNr.Location = new System.Drawing.Point(229, 204);
+            this.cNr.Name = "cNr";
+            this.cNr.Size = new System.Drawing.Size(166, 22);
+            this.cNr.TabIndex = 5;
+            // 
+            // cEmail
+            // 
+            this.cEmail.Location = new System.Drawing.Point(229, 168);
+            this.cEmail.Name = "cEmail";
+            this.cEmail.Size = new System.Drawing.Size(166, 22);
+            this.cEmail.TabIndex = 4;
+            // 
+            // cCompanyname
+            // 
+            this.cCompanyname.Location = new System.Drawing.Point(229, 129);
+            this.cCompanyname.Name = "cCompanyname";
+            this.cCompanyname.Size = new System.Drawing.Size(166, 22);
+            this.cCompanyname.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(114, 207);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(109, 16);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Contact Number: ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(114, 174);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 16);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Company email: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(54, 135);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(169, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Enter your company name: ";
             // 
             // checkBox1
             // 
@@ -261,54 +309,6 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(144, 231);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 16);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Email: ";
-            // 
-            // eEmail
-            // 
-            this.eEmail.Location = new System.Drawing.Point(207, 225);
-            this.eEmail.Name = "eEmail";
-            this.eEmail.Size = new System.Drawing.Size(100, 22);
-            this.eEmail.TabIndex = 8;
-            // 
-            // cLName
-            // 
-            this.cLName.Location = new System.Drawing.Point(229, 80);
-            this.cLName.Name = "cLName";
-            this.cLName.Size = new System.Drawing.Size(166, 22);
-            this.cLName.TabIndex = 7;
-            // 
-            // cFName
-            // 
-            this.cFName.Location = new System.Drawing.Point(229, 40);
-            this.cFName.Name = "cFName";
-            this.cFName.Size = new System.Drawing.Size(166, 22);
-            this.cFName.TabIndex = 8;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(143, 46);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 16);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "First Name: ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(143, 86);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 16);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Last Name: ";
-            // 
             // generateID
             // 
             this.generateID.Location = new System.Drawing.Point(319, 156);
@@ -319,12 +319,12 @@
             this.generateID.UseVisualStyleBackColor = true;
             this.generateID.Click += new System.EventHandler(this.generateID_Click);
             // 
-            // textBox1
+            // IDtxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(455, 164);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 9;
+            this.IDtxt.Location = new System.Drawing.Point(455, 164);
+            this.IDtxt.Name = "IDtxt";
+            this.IDtxt.Size = new System.Drawing.Size(100, 22);
+            this.IDtxt.TabIndex = 9;
             // 
             // label11
             // 
@@ -341,7 +341,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 626);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.IDtxt);
             this.Controls.Add(this.generateID);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
@@ -391,7 +391,7 @@
         private System.Windows.Forms.TextBox cFName;
         private System.Windows.Forms.TextBox cLName;
         private System.Windows.Forms.Button generateID;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox IDtxt;
         private System.Windows.Forms.Label label11;
     }
 }
