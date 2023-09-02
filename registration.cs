@@ -7,15 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace cmpg223_project
 {
     public partial class registration : Form
     {
+
+        SqlConnection conn;
+        SqlDataAdapter adapter;
+        SqlDataReader reader;
+        SqlCommand command; 
         public registration()
         {
             InitializeComponent();
         }
+
+
+        //Employee detail variables 
+        public int employeeID;
+        public string employeeFname ;
+        public string employeeLName;
+        public string employeeCellnr;
+        public string empEmail;
+
+
+        //client detail variables
+        public int clientID;
+        public string cleintFname;
+        public string clientLName;
+        public string clientCellnr;
+        public string companyname;
+        public string clientEmail;
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
@@ -45,6 +68,52 @@ namespace cmpg223_project
             {
                 groupBox1.Hide();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            employeeFname = eFName.Text;
+            employeeLName = eLName.Text;
+            employeeCellnr = eNr.Text;
+            empEmail = eEmail.Text;
+
+            // employee signup button 
+            conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bethel\Documents\@NWU\SECOND SEMESTER\CMPG223\final project\cmpg223 project\DevTrackerDB.mdf"";Integrated Security=True");
+            conn.Open();
+
+            conn.Close();
+        }
+
+        private void eName_TextChanged(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void clientsSignUP_Click(object sender, EventArgs e)
+        {
+            cleintFname = cFName.Text;
+            clientLName = cLName.Text;
+            companyname = cCompanyname.Text;
+            clientCellnr = cNr.Text;
+            clientEmail = cEmail.Text;
+
+
+            // cleints/company sign up
+            conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bethel\Documents\@NWU\SECOND SEMESTER\CMPG223\final project\cmpg223 project\DevTrackerDB.mdf"";Integrated Security=True");
+            conn.Open();
+            command = new SqlCommand("Insert into Clients Values(' "+)");
+            conn.Close();
+        }
+
+        private void generateID_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
