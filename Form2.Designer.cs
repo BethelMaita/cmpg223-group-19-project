@@ -45,10 +45,10 @@ namespace cmpg223_project
             this.btnExit = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbReport = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnExit2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRequest = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,7 +64,7 @@ namespace cmpg223_project
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(798, 389);
+            this.tabControl1.Size = new System.Drawing.Size(798, 397);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -76,7 +76,7 @@ namespace cmpg223_project
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(790, 363);
+            this.tabPage1.Size = new System.Drawing.Size(790, 371);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Update Project Schedule";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -178,16 +178,17 @@ namespace cmpg223_project
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(715, 305);
+            this.btnLogOut.Location = new System.Drawing.Point(709, 296);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(75, 23);
             this.btnLogOut.TabIndex = 4;
             this.btnLogOut.Text = "Log out";
             this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(715, 334);
+            this.btnExit.Location = new System.Drawing.Point(709, 325);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 0;
@@ -198,14 +199,14 @@ namespace cmpg223_project
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.pictureBox1);
-            this.tabPage2.Controls.Add(this.richTextBox1);
+            this.tabPage2.Controls.Add(this.rtbReport);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.btnExit2);
-            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.btnRequest);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(790, 363);
+            this.tabPage2.Size = new System.Drawing.Size(790, 371);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Request Report";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -220,13 +221,13 @@ namespace cmpg223_project
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // richTextBox1
+            // rtbReport
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(431, 0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(359, 335);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.rtbReport.Location = new System.Drawing.Point(431, 0);
+            this.rtbReport.Name = "rtbReport";
+            this.rtbReport.Size = new System.Drawing.Size(359, 335);
+            this.rtbReport.TabIndex = 4;
+            this.rtbReport.Text = "";
             // 
             // label5
             // 
@@ -241,7 +242,7 @@ namespace cmpg223_project
             // 
             // btnExit2
             // 
-            this.btnExit2.Location = new System.Drawing.Point(712, 334);
+            this.btnExit2.Location = new System.Drawing.Point(712, 341);
             this.btnExit2.Name = "btnExit2";
             this.btnExit2.Size = new System.Drawing.Size(75, 23);
             this.btnExit2.TabIndex = 1;
@@ -249,15 +250,16 @@ namespace cmpg223_project
             this.btnExit2.UseVisualStyleBackColor = true;
             this.btnExit2.Click += new System.EventHandler(this.btnExit2_Click);
             // 
-            // button1
+            // btnRequest
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(48, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(354, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Request";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRequest.Location = new System.Drawing.Point(48, 50);
+            this.btnRequest.Name = "btnRequest";
+            this.btnRequest.Size = new System.Drawing.Size(354, 33);
+            this.btnRequest.TabIndex = 0;
+            this.btnRequest.Text = "Request";
+            this.btnRequest.UseVisualStyleBackColor = true;
+            this.btnRequest.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmDeveloper
             // 
@@ -288,7 +290,7 @@ namespace cmpg223_project
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnExit2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRequest;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.DateTimePicker dtmDue;
@@ -299,7 +301,7 @@ namespace cmpg223_project
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbProjectDateToUpdate;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbReport;
         private System.Windows.Forms.Label label5;
     }
 }

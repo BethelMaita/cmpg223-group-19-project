@@ -12,6 +12,12 @@ namespace cmpg223_project
 {
     public partial class Login : Form
     {
+        public static int LoggedInEmployeeID { get; private set; }
+        // Method to set the logged-in employee ID when authentication succeeds
+        private void SetLoggedInEmployeeID(int employeeID)
+        {
+            LoggedInEmployeeID = employeeID;
+        }
         public Login()
         {
             InitializeComponent();
