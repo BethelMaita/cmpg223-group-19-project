@@ -15,10 +15,8 @@ namespace cmpg223_project
     {
         private string conStr = "YourConnectionString"; // Replace with your actual connection string
         SqlConnection conn;
-        SqlDataAdapter adap;
-        SqlDataReader read;
-        SqlCommand comm;
-        DataSet ds;
+        SqlDataReader reader;
+        SqlCommand cmd;
 
         public FrmDeveloper()
         {
@@ -38,6 +36,8 @@ namespace cmpg223_project
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             int phaseIdToUpdate;
+
+            // Try to parse the Phase ID from the textbox
             if (!int.TryParse(tbProjectDateToUpdate.Text, out phaseIdToUpdate))
             {
                 MessageBox.Show("Invalid Phase ID. Please enter a valid Phase ID.");
@@ -56,29 +56,30 @@ namespace cmpg223_project
 
             try
             {
-                SqlConnection conn = new SqlConnection(conStr);
+                conn = new SqlConnection(conStr);
                 conn.Open();
-                 // Define the SQL update query
-                 string updateQuery = "UPDATE PROJECTSCHEDULES SET ScheduleStartDate = @StartDate, ScheduleDueDate = @DueDate " +
-                                         "WHERE PhaseID = @PhaseID";
 
-                        SqlCommand cmd = new SqlCommand(updateQuery, conn);
-                        // Add parameters to the SQL query
-                        cmd.Parameters.Add("@StartDate", SqlDbType.DateTime).Value = startDate;
-                        cmd.Parameters.Add("@DueDate", SqlDbType.DateTime).Value = dueDate;
-                        cmd.Parameters.Add("@PhaseID", SqlDbType.Int).Value = phaseIdToUpdate;
+                // Define the SQL update query
+                string updateQuery = "UPDATE PROJECTSCHEDULES SET ScheduleStartDate = @StartDate, ScheduleDueDate = @DueDate " +
+                                     "WHERE PhaseID = @PhaseID";
 
-                        int rowsAffected = cmd.ExecuteNonQuery();
+                cmd = new SqlCommand(updateQuery, conn);
 
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Update successful!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("No records updated. Phase ID not found.");
-                        }
-                        
+                // Add parameters to the SQL query
+                cmd.Parameters.Add("@StartDate", SqlDbType.DateTime).Value = startDate;
+                cmd.Parameters.Add("@DueDate", SqlDbType.DateTime).Value = dueDate;
+                cmd.Parameters.Add("@PhaseID", SqlDbType.Int).Value = phaseIdToUpdate;
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Update successful!");
+                }
+                else
+                {
+                    MessageBox.Show("No records updated. Phase ID not found.");
+                }
             }
             catch (Exception ex)
             {
@@ -88,20 +89,25 @@ namespace cmpg223_project
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
+            // Close the current FrmDeveloper form
+            this.Close();
 
+            // Show the Login form
+            Login loginForm = new Login();
+            loginForm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             int loggedInEmployeeID = Login.LoggedInEmployeeID;
-            // Get the current system month
             int currentMonth = DateTime.Now.Month;
 
             try
             {
-                SqlConnection conn = new SqlConnection(conStr);                
+                using (SqlConnection conn = new SqlConnection(conStr))
+                {
                     conn.Open();
-                    // Define a SQL query to retrieve upcoming projects for the logged-in employee
+
                     string reportQuery = "SELECT P.ProjectID, P.ProjectDescription, C.ClientCompanyName, " +
                                          "PH.PhaseName, PS.ScheduleStartDate, PS.ScheduleDueDate " +
                                          "FROM PROJECTS P " +
@@ -112,27 +118,27 @@ namespace cmpg223_project
                                          "WHERE MONTH(PS.ScheduleDueDate) = @CurrentMonth " +
                                          "AND PA.EmployeeID = @EmployeeID";
 
-                SqlCommand cmd = new SqlCommand(reportQuery, conn);
+                    using (SqlCommand cmd = new SqlCommand(reportQuery, conn))
+                    {
                         cmd.Parameters.AddWithValue("@CurrentMonth", currentMonth);
                         cmd.Parameters.AddWithValue("@EmployeeID", loggedInEmployeeID);
-                SqlDataReader read = cmd.ExecuteReader();
-                  
-                            // Clear the RichTextBox
+
+                        using (reader = cmd.ExecuteReader())
+                        {
                             rtbReport.Clear();
-                            // Build and display the report header
                             rtbReport.AppendText($"UPCOMING PROJECTS FOR Employee: {loggedInEmployeeID}\n");
                             rtbReport.AppendText("----------------------------------------------------------------\n");
                             rtbReport.AppendText($"Dear {GetEmployeeName(loggedInEmployeeID)}, here is a list of your upcoming due projects for {DateTime.Now.ToString("MMMM")}:\n\n");
-                            // Iterate through the data and add projects to the report
+
                             int projectCounter = 1;
-                            while (read.Read())
+                            while (reader.Read())
                             {
-                                int projectID = read.GetInt32(0);
-                                string projectDescription = read.GetString(1);
-                                string clientCompanyName = read.GetString(2);
-                                string phaseName = read.GetString(3);
-                                DateTime startDate = read.GetDateTime(4);
-                                DateTime dueDate = read.GetDateTime(5);
+                                int projectID = reader.GetInt32(0);
+                                string projectDescription = reader.GetString(1);
+                                string clientCompanyName = reader.GetString(2);
+                                string phaseName = reader.GetString(3);
+                                DateTime startDate = reader.GetDateTime(4);
+                                DateTime dueDate = reader.GetDateTime(5);
 
                                 string projectInfo = $"{projectCounter}.) Project: {projectID}\n" +
                                                      $"\t{projectDescription} for {clientCompanyName}.\n" +
@@ -143,30 +149,39 @@ namespace cmpg223_project
                                 rtbReport.AppendText(projectInfo);
                                 projectCounter++;
                             }
-                   
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private string GetEmployeeName(int employeeID)
         {
             try
             {
-                SqlConnection conn = new SqlConnection(conStr);
+                using (SqlConnection conn = new SqlConnection(conStr))
+                {
                     conn.Open();
                     string query = "SELECT employeeFirstName, employeeLastName FROM EMPLOYEES WHERE employeeID = @EmployeeID";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@EmployeeID", employeeID);
-                SqlDataReader read = cmd.ExecuteReader();
-                            if (read.Read())
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@EmployeeID", employeeID);
+
+                        using (reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
                             {
-                                string firstName = read.GetString(0);
-                                string lastName = read.GetString(1);
+                                string firstName = reader.GetString(0);
+                                string lastName = reader.GetString(1);
                                 return $"{firstName} {lastName}";
                             }
-                
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -177,8 +192,3 @@ namespace cmpg223_project
         }
     }
 }
-    
-
-        
-    
-
