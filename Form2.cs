@@ -13,7 +13,11 @@ namespace cmpg223_project
 {
     public partial class FrmDeveloper : Form
     {
+//<<<<<<< HEAD
         private string conStr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Bethel\\Documents\\@NWU\\SECOND SEMESTER\\CMPG223\\final project\\cmpg223 project\\DevTrackerDB.mdf\";Integrated Security=True"; // Replace with your actual connection string
+//=======
+       // private string conStr = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bethel\Documents\@NWU\SECOND SEMESTER\CMPG223\final project\cmpg223 project\DevTrackerDB.mdf"";Integrated Security = True"; 
+//>>>>>>> 7a7bea8e3e5e09a638ff8e69f4f566a9ce4322a9
         SqlConnection conn;
         SqlDataReader reader;
         SqlCommand cmd;
@@ -91,7 +95,6 @@ namespace cmpg223_project
         {
             // Close the current FrmDeveloper form
             this.Close();
-
             // Show the Login form
             Login loginForm = new Login();
             loginForm.Show();
