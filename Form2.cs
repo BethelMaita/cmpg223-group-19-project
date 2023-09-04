@@ -13,7 +13,7 @@ namespace cmpg223_project
 {
     public partial class FrmDeveloper : Form
     {
-        private string conStr = "YourConnectionString"; // Replace with your actual connection string
+        private string conStr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\Bethel\\Documents\\@NWU\\SECOND SEMESTER\\CMPG223\\final project\\cmpg223 project\\DevTrackerDB.mdf\";Integrated Security=True"; // Replace with your actual connection string
         SqlConnection conn;
         SqlDataReader reader;
         SqlCommand cmd;
