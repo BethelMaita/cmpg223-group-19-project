@@ -28,27 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.LoginButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.userIDTextBox = new System.Windows.Forms.TextBox();
+            this.passTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.adminCheckBox = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.client = new System.Windows.Forms.CheckBox();
+            this.Employee = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // LoginButton
             // 
-            this.button1.Location = new System.Drawing.Point(99, 175);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 48);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.LoginButton.Location = new System.Drawing.Point(118, 191);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(141, 48);
+            this.LoginButton.TabIndex = 1;
+            this.LoginButton.Text = "login";
+            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -63,25 +66,25 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 118);
+            this.label2.Location = new System.Drawing.Point(54, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 8;
             this.label2.Text = "Password";
             // 
-            // textBox1
+            // userIDTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(166, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 22);
-            this.textBox1.TabIndex = 9;
+            this.userIDTextBox.Location = new System.Drawing.Point(166, 62);
+            this.userIDTextBox.Name = "userIDTextBox";
+            this.userIDTextBox.Size = new System.Drawing.Size(150, 22);
+            this.userIDTextBox.TabIndex = 9;
             // 
-            // textBox2
+            // passTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(166, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 22);
-            this.textBox2.TabIndex = 10;
+            this.passTextBox.Location = new System.Drawing.Point(166, 101);
+            this.passTextBox.Name = "passTextBox";
+            this.passTextBox.Size = new System.Drawing.Size(150, 22);
+            this.passTextBox.TabIndex = 10;
             // 
             // label3
             // 
@@ -98,18 +101,32 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.groupBox1.Controls.Add(this.Employee);
+            this.groupBox1.Controls.Add(this.client);
+            this.groupBox1.Controls.Add(this.adminCheckBox);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.passTextBox);
+            this.groupBox1.Controls.Add(this.userIDTextBox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.LoginButton);
             this.groupBox1.Location = new System.Drawing.Point(444, 7);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(362, 347);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Welcome  to DevTracker";
+            // 
+            // adminCheckBox
+            // 
+            this.adminCheckBox.AutoSize = true;
+            this.adminCheckBox.ForeColor = System.Drawing.Color.Red;
+            this.adminCheckBox.Location = new System.Drawing.Point(73, 139);
+            this.adminCheckBox.Name = "adminCheckBox";
+            this.adminCheckBox.Size = new System.Drawing.Size(67, 20);
+            this.adminCheckBox.TabIndex = 12;
+            this.adminCheckBox.Text = "Admin";
+            this.adminCheckBox.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -121,6 +138,26 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // client
+            // 
+            this.client.AutoSize = true;
+            this.client.Location = new System.Drawing.Point(156, 139);
+            this.client.Name = "client";
+            this.client.Size = new System.Drawing.Size(60, 20);
+            this.client.TabIndex = 13;
+            this.client.Text = "client";
+            this.client.UseVisualStyleBackColor = true;
+            // 
+            // Employee
+            // 
+            this.Employee.AutoSize = true;
+            this.Employee.Location = new System.Drawing.Point(238, 139);
+            this.Employee.Name = "Employee";
+            this.Employee.Size = new System.Drawing.Size(91, 20);
+            this.Employee.TabIndex = 14;
+            this.Employee.Text = "Employee";
+            this.Employee.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
@@ -139,14 +176,17 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox userIDTextBox;
+        private System.Windows.Forms.TextBox passTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox adminCheckBox;
+        private System.Windows.Forms.CheckBox Employee;
+        private System.Windows.Forms.CheckBox client;
     }
 }
 

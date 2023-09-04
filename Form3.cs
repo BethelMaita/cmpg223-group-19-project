@@ -277,5 +277,12 @@ namespace cmpg223_project
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login back = new Login();
+            back.ShowDialog();
+        }
     }
 }
