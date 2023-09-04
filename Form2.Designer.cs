@@ -64,7 +64,7 @@ namespace cmpg223_project
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(798, 397);
+            this.tabControl1.Size = new System.Drawing.Size(798, 387);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -76,7 +76,7 @@ namespace cmpg223_project
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(790, 371);
+            this.tabPage1.Size = new System.Drawing.Size(790, 361);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Update Project Schedule";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -178,9 +178,9 @@ namespace cmpg223_project
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(709, 296);
+            this.btnLogOut.Location = new System.Drawing.Point(502, 298);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(75, 23);
+            this.btnLogOut.Size = new System.Drawing.Size(138, 50);
             this.btnLogOut.TabIndex = 4;
             this.btnLogOut.Text = "Log out";
             this.btnLogOut.UseVisualStyleBackColor = true;
@@ -188,9 +188,9 @@ namespace cmpg223_project
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(709, 325);
+            this.btnExit.Location = new System.Drawing.Point(646, 298);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(138, 50);
             this.btnExit.TabIndex = 0;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -242,9 +242,9 @@ namespace cmpg223_project
             // 
             // btnExit2
             // 
-            this.btnExit2.Location = new System.Drawing.Point(712, 341);
+            this.btnExit2.Location = new System.Drawing.Point(681, 341);
             this.btnExit2.Name = "btnExit2";
-            this.btnExit2.Size = new System.Drawing.Size(75, 23);
+            this.btnExit2.Size = new System.Drawing.Size(106, 23);
             this.btnExit2.TabIndex = 1;
             this.btnExit2.Text = "Exit";
             this.btnExit2.UseVisualStyleBackColor = true;
@@ -265,7 +265,7 @@ namespace cmpg223_project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 399);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmDeveloper";
             this.Text = "Developer";
