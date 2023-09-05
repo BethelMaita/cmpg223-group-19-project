@@ -30,7 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tbIdRemove = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -106,9 +105,9 @@
             this.tbEmpId = new System.Windows.Forms.TextBox();
             this.btnAddProjectAssignment = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -119,6 +118,7 @@
             this.tabPage3.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -127,7 +127,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(932, 477);
@@ -140,24 +140,13 @@
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(924, 448);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Mange Clients";
+            this.tabPage1.Text = "Manage Clients";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::cmpg223_project.Properties.Resources.DevTracker_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(255, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // groupBox3
             // 
@@ -165,9 +154,9 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.btnRemove);
             this.groupBox3.Location = new System.Drawing.Point(557, 101);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(267, 331);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
@@ -176,7 +165,7 @@
             // tbIdRemove
             // 
             this.tbIdRemove.Location = new System.Drawing.Point(125, 39);
-            this.tbIdRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbIdRemove.Margin = new System.Windows.Forms.Padding(4);
             this.tbIdRemove.Name = "tbIdRemove";
             this.tbIdRemove.Size = new System.Drawing.Size(132, 22);
             this.tbIdRemove.TabIndex = 11;
@@ -187,14 +176,14 @@
             this.label7.Location = new System.Drawing.Point(8, 43);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 16);
+            this.label7.Size = new System.Drawing.Size(60, 17);
             this.label7.TabIndex = 10;
             this.label7.Text = "Client ID";
             // 
             // btnRemove
             // 
             this.btnRemove.Location = new System.Drawing.Point(8, 295);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(251, 28);
             this.btnRemove.TabIndex = 0;
@@ -218,9 +207,9 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.btnUpdate);
             this.groupBox2.Location = new System.Drawing.Point(283, 101);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(267, 331);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -229,7 +218,7 @@
             // tbFnameUpdate
             // 
             this.tbFnameUpdate.Location = new System.Drawing.Point(125, 186);
-            this.tbFnameUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbFnameUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.tbFnameUpdate.Name = "tbFnameUpdate";
             this.tbFnameUpdate.Size = new System.Drawing.Size(132, 22);
             this.tbFnameUpdate.TabIndex = 19;
@@ -237,7 +226,7 @@
             // tbLnameUpdate
             // 
             this.tbLnameUpdate.Location = new System.Drawing.Point(125, 215);
-            this.tbLnameUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbLnameUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.tbLnameUpdate.Name = "tbLnameUpdate";
             this.tbLnameUpdate.Size = new System.Drawing.Size(132, 22);
             this.tbLnameUpdate.TabIndex = 18;
@@ -248,7 +237,7 @@
             this.label11.Location = new System.Drawing.Point(8, 190);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 16);
+            this.label11.Size = new System.Drawing.Size(76, 17);
             this.label11.TabIndex = 17;
             this.label11.Text = "First Name";
             // 
@@ -258,14 +247,14 @@
             this.label12.Location = new System.Drawing.Point(8, 224);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 16);
+            this.label12.Size = new System.Drawing.Size(76, 17);
             this.label12.TabIndex = 16;
             this.label12.Text = "Last Name";
             // 
             // tbPhoneUpdate
             // 
             this.tbPhoneUpdate.Location = new System.Drawing.Point(125, 146);
-            this.tbPhoneUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPhoneUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.tbPhoneUpdate.Name = "tbPhoneUpdate";
             this.tbPhoneUpdate.Size = new System.Drawing.Size(132, 22);
             this.tbPhoneUpdate.TabIndex = 12;
@@ -273,7 +262,7 @@
             // tbEmailUpdate
             // 
             this.tbEmailUpdate.Location = new System.Drawing.Point(125, 113);
-            this.tbEmailUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbEmailUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.tbEmailUpdate.Name = "tbEmailUpdate";
             this.tbEmailUpdate.Size = new System.Drawing.Size(132, 22);
             this.tbEmailUpdate.TabIndex = 13;
@@ -281,7 +270,7 @@
             // tbCompUpdate
             // 
             this.tbCompUpdate.Location = new System.Drawing.Point(125, 76);
-            this.tbCompUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCompUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.tbCompUpdate.Name = "tbCompUpdate";
             this.tbCompUpdate.Size = new System.Drawing.Size(132, 22);
             this.tbCompUpdate.TabIndex = 14;
@@ -289,7 +278,7 @@
             // tbIdUpdate
             // 
             this.tbIdUpdate.Location = new System.Drawing.Point(125, 39);
-            this.tbIdUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbIdUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.tbIdUpdate.Name = "tbIdUpdate";
             this.tbIdUpdate.Size = new System.Drawing.Size(132, 22);
             this.tbIdUpdate.TabIndex = 15;
@@ -300,7 +289,7 @@
             this.label8.Location = new System.Drawing.Point(8, 43);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 16);
+            this.label8.Size = new System.Drawing.Size(60, 17);
             this.label8.TabIndex = 11;
             this.label8.Text = "Client ID";
             // 
@@ -310,7 +299,7 @@
             this.label6.Location = new System.Drawing.Point(8, 150);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 16);
+            this.label6.Size = new System.Drawing.Size(99, 17);
             this.label6.TabIndex = 9;
             this.label6.Text = "PhoneNumber";
             // 
@@ -320,7 +309,7 @@
             this.label5.Location = new System.Drawing.Point(8, 117);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 16);
+            this.label5.Size = new System.Drawing.Size(42, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "Email";
             // 
@@ -330,14 +319,14 @@
             this.label4.Location = new System.Drawing.Point(8, 80);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 16);
+            this.label4.Size = new System.Drawing.Size(108, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Company Name";
             // 
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(8, 295);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(251, 28);
             this.btnUpdate.TabIndex = 0;
@@ -359,9 +348,9 @@
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(8, 101);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(267, 331);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -370,7 +359,7 @@
             // tbFname
             // 
             this.tbFname.Location = new System.Drawing.Point(125, 151);
-            this.tbFname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbFname.Margin = new System.Windows.Forms.Padding(4);
             this.tbFname.Name = "tbFname";
             this.tbFname.Size = new System.Drawing.Size(132, 22);
             this.tbFname.TabIndex = 10;
@@ -378,7 +367,7 @@
             // tbLname
             // 
             this.tbLname.Location = new System.Drawing.Point(125, 181);
-            this.tbLname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbLname.Margin = new System.Windows.Forms.Padding(4);
             this.tbLname.Name = "tbLname";
             this.tbLname.Size = new System.Drawing.Size(132, 22);
             this.tbLname.TabIndex = 9;
@@ -389,7 +378,7 @@
             this.label10.Location = new System.Drawing.Point(8, 155);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 16);
+            this.label10.Size = new System.Drawing.Size(76, 17);
             this.label10.TabIndex = 8;
             this.label10.Text = "First Name";
             // 
@@ -399,14 +388,14 @@
             this.label9.Location = new System.Drawing.Point(8, 190);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 16);
+            this.label9.Size = new System.Drawing.Size(76, 17);
             this.label9.TabIndex = 7;
             this.label9.Text = "Last Name";
             // 
             // tbEmail
             // 
             this.tbEmail.Location = new System.Drawing.Point(125, 71);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(132, 22);
             this.tbEmail.TabIndex = 6;
@@ -414,7 +403,7 @@
             // tbPhone
             // 
             this.tbPhone.Location = new System.Drawing.Point(125, 113);
-            this.tbPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPhone.Margin = new System.Windows.Forms.Padding(4);
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.Size = new System.Drawing.Size(132, 22);
             this.tbPhone.TabIndex = 5;
@@ -425,7 +414,7 @@
             this.label3.Location = new System.Drawing.Point(8, 117);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 16);
+            this.label3.Size = new System.Drawing.Size(99, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "PhoneNumber";
             // 
@@ -435,14 +424,14 @@
             this.label2.Location = new System.Drawing.Point(8, 80);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.Size = new System.Drawing.Size(42, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Email";
             // 
             // tbCompName
             // 
             this.tbCompName.Location = new System.Drawing.Point(125, 34);
-            this.tbCompName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCompName.Margin = new System.Windows.Forms.Padding(4);
             this.tbCompName.Name = "tbCompName";
             this.tbCompName.Size = new System.Drawing.Size(132, 22);
             this.tbCompName.TabIndex = 2;
@@ -450,7 +439,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(8, 295);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(251, 28);
             this.btnAdd.TabIndex = 0;
@@ -464,7 +453,7 @@
             this.label1.Location = new System.Drawing.Point(8, 43);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 16);
+            this.label1.Size = new System.Drawing.Size(108, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Company Name";
             // 
@@ -474,12 +463,12 @@
             this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.groupBox6);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1043, 510);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(924, 448);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Mange Projects";
+            this.tabPage2.Text = "Manage Projects";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox4
@@ -488,9 +477,9 @@
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.btnProjectRemove);
             this.groupBox4.Location = new System.Drawing.Point(713, 79);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(267, 331);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
@@ -499,7 +488,7 @@
             // tbProjectIdRemove
             // 
             this.tbProjectIdRemove.Location = new System.Drawing.Point(125, 39);
-            this.tbProjectIdRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbProjectIdRemove.Margin = new System.Windows.Forms.Padding(4);
             this.tbProjectIdRemove.Name = "tbProjectIdRemove";
             this.tbProjectIdRemove.Size = new System.Drawing.Size(132, 22);
             this.tbProjectIdRemove.TabIndex = 11;
@@ -510,14 +499,14 @@
             this.label13.Location = new System.Drawing.Point(8, 43);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 16);
+            this.label13.Size = new System.Drawing.Size(69, 17);
             this.label13.TabIndex = 10;
             this.label13.Text = "Project ID";
             // 
             // btnProjectRemove
             // 
             this.btnProjectRemove.Location = new System.Drawing.Point(8, 295);
-            this.btnProjectRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProjectRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnProjectRemove.Name = "btnProjectRemove";
             this.btnProjectRemove.Size = new System.Drawing.Size(251, 28);
             this.btnProjectRemove.TabIndex = 0;
@@ -541,9 +530,9 @@
             this.groupBox5.Controls.Add(this.label19);
             this.groupBox5.Controls.Add(this.btnProjectUpdate);
             this.groupBox5.Location = new System.Drawing.Point(361, 79);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(352, 331);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
@@ -552,7 +541,7 @@
             // tbAssignemntUpdate
             // 
             this.tbAssignemntUpdate.Location = new System.Drawing.Point(171, 186);
-            this.tbAssignemntUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAssignemntUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.tbAssignemntUpdate.Name = "tbAssignemntUpdate";
             this.tbAssignemntUpdate.Size = new System.Drawing.Size(132, 22);
             this.tbAssignemntUpdate.TabIndex = 19;
@@ -560,7 +549,7 @@
             // tbProjectDescUpdate
             // 
             this.tbProjectDescUpdate.Location = new System.Drawing.Point(171, 215);
-            this.tbProjectDescUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbProjectDescUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.tbProjectDescUpdate.Name = "tbProjectDescUpdate";
             this.tbProjectDescUpdate.Size = new System.Drawing.Size(132, 22);
             this.tbProjectDescUpdate.TabIndex = 18;
@@ -571,7 +560,7 @@
             this.label14.Location = new System.Drawing.Point(8, 190);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(93, 16);
+            this.label14.Size = new System.Drawing.Size(98, 17);
             this.label14.TabIndex = 17;
             this.label14.Text = "Assignment ID";
             // 
@@ -581,14 +570,14 @@
             this.label15.Location = new System.Drawing.Point(8, 224);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(123, 16);
+            this.label15.Size = new System.Drawing.Size(131, 17);
             this.label15.TabIndex = 16;
             this.label15.Text = "Project Description ";
             // 
             // tbScheduleUpdate
             // 
             this.tbScheduleUpdate.Location = new System.Drawing.Point(171, 146);
-            this.tbScheduleUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbScheduleUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.tbScheduleUpdate.Name = "tbScheduleUpdate";
             this.tbScheduleUpdate.Size = new System.Drawing.Size(132, 22);
             this.tbScheduleUpdate.TabIndex = 12;
@@ -596,7 +585,7 @@
             // tbPhaseIdUpdate
             // 
             this.tbPhaseIdUpdate.Location = new System.Drawing.Point(171, 113);
-            this.tbPhaseIdUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPhaseIdUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.tbPhaseIdUpdate.Name = "tbPhaseIdUpdate";
             this.tbPhaseIdUpdate.Size = new System.Drawing.Size(132, 22);
             this.tbPhaseIdUpdate.TabIndex = 13;
@@ -604,7 +593,7 @@
             // tbClientUpdate
             // 
             this.tbClientUpdate.Location = new System.Drawing.Point(171, 76);
-            this.tbClientUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbClientUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.tbClientUpdate.Name = "tbClientUpdate";
             this.tbClientUpdate.Size = new System.Drawing.Size(132, 22);
             this.tbClientUpdate.TabIndex = 14;
@@ -612,7 +601,7 @@
             // tbProjectIdUpdate
             // 
             this.tbProjectIdUpdate.Location = new System.Drawing.Point(171, 39);
-            this.tbProjectIdUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbProjectIdUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.tbProjectIdUpdate.Name = "tbProjectIdUpdate";
             this.tbProjectIdUpdate.Size = new System.Drawing.Size(132, 22);
             this.tbProjectIdUpdate.TabIndex = 15;
@@ -623,7 +612,7 @@
             this.label16.Location = new System.Drawing.Point(8, 43);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(65, 16);
+            this.label16.Size = new System.Drawing.Size(69, 17);
             this.label16.TabIndex = 11;
             this.label16.Text = "Project ID";
             // 
@@ -633,7 +622,7 @@
             this.label17.Location = new System.Drawing.Point(8, 150);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(80, 16);
+            this.label17.Size = new System.Drawing.Size(84, 17);
             this.label17.TabIndex = 9;
             this.label17.Text = "Schedule ID";
             // 
@@ -643,7 +632,7 @@
             this.label18.Location = new System.Drawing.Point(8, 117);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(62, 16);
+            this.label18.Size = new System.Drawing.Size(65, 17);
             this.label18.TabIndex = 8;
             this.label18.Text = "Phase ID";
             // 
@@ -653,14 +642,14 @@
             this.label19.Location = new System.Drawing.Point(8, 80);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(56, 16);
+            this.label19.Size = new System.Drawing.Size(60, 17);
             this.label19.TabIndex = 7;
             this.label19.Text = "Client ID";
             // 
             // btnProjectUpdate
             // 
             this.btnProjectUpdate.Location = new System.Drawing.Point(8, 295);
-            this.btnProjectUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProjectUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnProjectUpdate.Name = "btnProjectUpdate";
             this.btnProjectUpdate.Size = new System.Drawing.Size(251, 28);
             this.btnProjectUpdate.TabIndex = 0;
@@ -682,9 +671,9 @@
             this.groupBox6.Controls.Add(this.tbPhaseIdAdd);
             this.groupBox6.Controls.Add(this.btnProjectAdd);
             this.groupBox6.Location = new System.Drawing.Point(33, 79);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox6.Size = new System.Drawing.Size(333, 331);
             this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
@@ -693,7 +682,7 @@
             // tbProjectDesc
             // 
             this.tbProjectDesc.Location = new System.Drawing.Point(187, 188);
-            this.tbProjectDesc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbProjectDesc.Margin = new System.Windows.Forms.Padding(4);
             this.tbProjectDesc.Name = "tbProjectDesc";
             this.tbProjectDesc.Size = new System.Drawing.Size(132, 22);
             this.tbProjectDesc.TabIndex = 24;
@@ -704,7 +693,7 @@
             this.label25.Location = new System.Drawing.Point(4, 158);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(93, 16);
+            this.label25.Size = new System.Drawing.Size(98, 17);
             this.label25.TabIndex = 23;
             this.label25.Text = "Assignment ID";
             // 
@@ -714,7 +703,7 @@
             this.label26.Location = new System.Drawing.Point(4, 192);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(123, 16);
+            this.label26.Size = new System.Drawing.Size(131, 17);
             this.label26.TabIndex = 22;
             this.label26.Text = "Project Description ";
             // 
@@ -724,7 +713,7 @@
             this.label28.Location = new System.Drawing.Point(4, 118);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(80, 16);
+            this.label28.Size = new System.Drawing.Size(84, 17);
             this.label28.TabIndex = 20;
             this.label28.Text = "Schedule ID";
             // 
@@ -734,7 +723,7 @@
             this.label29.Location = new System.Drawing.Point(4, 85);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(62, 16);
+            this.label29.Size = new System.Drawing.Size(65, 17);
             this.label29.TabIndex = 19;
             this.label29.Text = "Phase ID";
             // 
@@ -744,14 +733,14 @@
             this.label30.Location = new System.Drawing.Point(4, 48);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(56, 16);
+            this.label30.Size = new System.Drawing.Size(60, 17);
             this.label30.TabIndex = 18;
             this.label30.Text = "Client ID";
             // 
             // tbScheduleIdAdd
             // 
             this.tbScheduleIdAdd.Location = new System.Drawing.Point(187, 119);
-            this.tbScheduleIdAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbScheduleIdAdd.Margin = new System.Windows.Forms.Padding(4);
             this.tbScheduleIdAdd.Name = "tbScheduleIdAdd";
             this.tbScheduleIdAdd.Size = new System.Drawing.Size(132, 22);
             this.tbScheduleIdAdd.TabIndex = 10;
@@ -759,7 +748,7 @@
             // tbAssignmentAddId
             // 
             this.tbAssignmentAddId.Location = new System.Drawing.Point(187, 149);
-            this.tbAssignmentAddId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAssignmentAddId.Margin = new System.Windows.Forms.Padding(4);
             this.tbAssignmentAddId.Name = "tbAssignmentAddId";
             this.tbAssignmentAddId.Size = new System.Drawing.Size(132, 22);
             this.tbAssignmentAddId.TabIndex = 9;
@@ -767,7 +756,7 @@
             // tbClientIdAdd
             // 
             this.tbClientIdAdd.Location = new System.Drawing.Point(187, 39);
-            this.tbClientIdAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbClientIdAdd.Margin = new System.Windows.Forms.Padding(4);
             this.tbClientIdAdd.Name = "tbClientIdAdd";
             this.tbClientIdAdd.Size = new System.Drawing.Size(132, 22);
             this.tbClientIdAdd.TabIndex = 6;
@@ -775,7 +764,7 @@
             // tbPhaseIdAdd
             // 
             this.tbPhaseIdAdd.Location = new System.Drawing.Point(187, 81);
-            this.tbPhaseIdAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPhaseIdAdd.Margin = new System.Windows.Forms.Padding(4);
             this.tbPhaseIdAdd.Name = "tbPhaseIdAdd";
             this.tbPhaseIdAdd.Size = new System.Drawing.Size(132, 22);
             this.tbPhaseIdAdd.TabIndex = 5;
@@ -783,7 +772,7 @@
             // btnProjectAdd
             // 
             this.btnProjectAdd.Location = new System.Drawing.Point(8, 295);
-            this.btnProjectAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProjectAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnProjectAdd.Name = "btnProjectAdd";
             this.btnProjectAdd.Size = new System.Drawing.Size(251, 28);
             this.btnProjectAdd.TabIndex = 0;
@@ -796,10 +785,10 @@
             this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox8);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage3.Size = new System.Drawing.Size(1043, 510);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Size = new System.Drawing.Size(924, 448);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Manage Project Assignments";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -810,9 +799,9 @@
             this.groupBox7.Controls.Add(this.label20);
             this.groupBox7.Controls.Add(this.btnRemoveProjectAssignment);
             this.groupBox7.Location = new System.Drawing.Point(449, 89);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(267, 331);
             this.groupBox7.TabIndex = 8;
             this.groupBox7.TabStop = false;
@@ -821,7 +810,7 @@
             // tbAssignmentDel
             // 
             this.tbAssignmentDel.Location = new System.Drawing.Point(125, 39);
-            this.tbAssignmentDel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbAssignmentDel.Margin = new System.Windows.Forms.Padding(4);
             this.tbAssignmentDel.Name = "tbAssignmentDel";
             this.tbAssignmentDel.Size = new System.Drawing.Size(132, 22);
             this.tbAssignmentDel.TabIndex = 11;
@@ -832,14 +821,14 @@
             this.label20.Location = new System.Drawing.Point(8, 43);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(93, 16);
+            this.label20.Size = new System.Drawing.Size(98, 17);
             this.label20.TabIndex = 10;
             this.label20.Text = "Assignment ID";
             // 
             // btnRemoveProjectAssignment
             // 
             this.btnRemoveProjectAssignment.Location = new System.Drawing.Point(8, 295);
-            this.btnRemoveProjectAssignment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemoveProjectAssignment.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveProjectAssignment.Name = "btnRemoveProjectAssignment";
             this.btnRemoveProjectAssignment.Size = new System.Drawing.Size(251, 28);
             this.btnRemoveProjectAssignment.TabIndex = 0;
@@ -857,9 +846,9 @@
             this.groupBox8.Controls.Add(this.tbEmpId);
             this.groupBox8.Controls.Add(this.btnAddProjectAssignment);
             this.groupBox8.Location = new System.Drawing.Point(47, 89);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox8.Size = new System.Drawing.Size(333, 331);
             this.groupBox8.TabIndex = 7;
             this.groupBox8.TabStop = false;
@@ -871,7 +860,7 @@
             this.label23.Location = new System.Drawing.Point(4, 123);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(65, 16);
+            this.label23.Size = new System.Drawing.Size(69, 17);
             this.label23.TabIndex = 20;
             this.label23.Text = "Project ID";
             // 
@@ -881,7 +870,7 @@
             this.label24.Location = new System.Drawing.Point(4, 85);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(85, 16);
+            this.label24.Size = new System.Drawing.Size(87, 17);
             this.label24.TabIndex = 19;
             this.label24.Text = "Employee ID";
             // 
@@ -891,14 +880,14 @@
             this.label27.Location = new System.Drawing.Point(4, 48);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(52, 16);
+            this.label27.Size = new System.Drawing.Size(54, 17);
             this.label27.TabIndex = 18;
             this.label27.Text = "Role ID";
             // 
             // tbProjId
             // 
             this.tbProjId.Location = new System.Drawing.Point(187, 119);
-            this.tbProjId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbProjId.Margin = new System.Windows.Forms.Padding(4);
             this.tbProjId.Name = "tbProjId";
             this.tbProjId.Size = new System.Drawing.Size(132, 22);
             this.tbProjId.TabIndex = 10;
@@ -906,7 +895,7 @@
             // tbRoleID
             // 
             this.tbRoleID.Location = new System.Drawing.Point(187, 39);
-            this.tbRoleID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbRoleID.Margin = new System.Windows.Forms.Padding(4);
             this.tbRoleID.Name = "tbRoleID";
             this.tbRoleID.Size = new System.Drawing.Size(132, 22);
             this.tbRoleID.TabIndex = 6;
@@ -914,7 +903,7 @@
             // tbEmpId
             // 
             this.tbEmpId.Location = new System.Drawing.Point(187, 81);
-            this.tbEmpId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbEmpId.Margin = new System.Windows.Forms.Padding(4);
             this.tbEmpId.Name = "tbEmpId";
             this.tbEmpId.Size = new System.Drawing.Size(132, 22);
             this.tbEmpId.TabIndex = 5;
@@ -922,7 +911,7 @@
             // btnAddProjectAssignment
             // 
             this.btnAddProjectAssignment.Location = new System.Drawing.Point(8, 295);
-            this.btnAddProjectAssignment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddProjectAssignment.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddProjectAssignment.Name = "btnAddProjectAssignment";
             this.btnAddProjectAssignment.Size = new System.Drawing.Size(251, 28);
             this.btnAddProjectAssignment.TabIndex = 0;
@@ -940,6 +929,17 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::cmpg223_project.Properties.Resources.DevTracker_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(255, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -947,12 +947,11 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form3";
             this.Text = "Admin Form";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -971,6 +970,7 @@
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
