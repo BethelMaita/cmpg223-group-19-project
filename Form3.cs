@@ -70,7 +70,8 @@ namespace cmpg223_project
                 conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bethel\Documents\@NWU\SECOND SEMESTER\CMPG223\final project\cmpg223 project\DevTrackerDB.mdf"";Integrated Security=True");
                 conn.Open();
 
-                string updateQuery = "UPDATE Clients SET ClientCompanyName = @compName, ClientEmail = @email, ClientFirstName = @fName, ClientSurname = @sName, ClientPhoneNumber = @phoneNum " +
+                string updateQuery = "UPDATE Clients SET ClientCompanyName = @compName, ClientEmail = @email, " +
+                    "ClientFirstName = @fName, ClientSurname = @sName, ClientPhoneNumber = @phoneNum " +
                                      "WHERE ClientId = @clientId";
 
                 command = new SqlCommand(updateQuery, conn);
@@ -142,7 +143,8 @@ namespace cmpg223_project
             {
                 conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bethel\Documents\@NWU\SECOND SEMESTER\CMPG223\final project\cmpg223 project\DevTrackerDB.mdf"";Integrated Security=True");
                 conn.Open();
-                command = new SqlCommand("Insert into Projects Values(" + projectId + ", ' " + clientID + "', '" + phaseId + "', '" + scheduleId + "', '" + assignmentId + "' , '" + projectDesctription + "') ", conn);
+                command = new SqlCommand("Insert into Projects Values(" + projectId + ", ' " + clientID + "', " +
+                    "" + phaseId + "', '" + scheduleId + "', '" + assignmentId + "' , '" + projectDesctription + "') ", conn);
 
                 adapter = new SqlDataAdapter();
                 adapter.InsertCommand = command;
@@ -193,7 +195,8 @@ namespace cmpg223_project
                 conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bethel\Documents\@NWU\SECOND SEMESTER\CMPG223\final project\cmpg223 project\DevTrackerDB.mdf"";Integrated Security=True");
                 conn.Open();
 
-                string updateQuery = "UPDATE Projects SET ClientId = @cId, PhaseId = @pId, ScheduleId = @sId, AssignmentId = @aId, ProjectDescription = @desc " +
+                string updateQuery = "UPDATE Projects SET ClientId = @cId, PhaseId = @pId, ScheduleId = @sId, " +
+                    "AssignmentId = @aId, ProjectDescription = @desc " +
                                      "WHERE Projects = @projectId";
 
                 command = new SqlCommand(updateQuery, conn);

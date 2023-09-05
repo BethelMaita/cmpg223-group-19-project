@@ -64,7 +64,8 @@ namespace cmpg223_project
                 conn.Open();
 
                 // Define the SQL update query
-                string updateQuery = "UPDATE PROJECTSCHEDULES SET ScheduleStartDate = @StartDate, ScheduleDueDate = @DueDate " +
+                string updateQuery = "UPDATE PROJECTSCHEDULES SET ScheduleStartDate = @StartDate, " +
+                    "ScheduleDueDate = @DueDate " +
                                      "WHERE PhaseID = @PhaseID";
 
                 cmd = new SqlCommand(updateQuery, conn);

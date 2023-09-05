@@ -40,7 +40,7 @@ namespace cmpg223_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (adminCheckBox.Checked || userIDTextBox.Text == "1992" || passTextBox.Text == "DevTracker")
+            if (adminCheckBox.Checked & userIDTextBox.Text == "1992" & passTextBox.Text == "DevTracker")
             {
                 Form3 admin = new Form3();
                 admin.ShowDialog();
@@ -51,8 +51,22 @@ namespace cmpg223_project
             }
             else if (Employee.Checked)
             {
-                FrmDeveloper employee = new FrmDeveloper();
-                employee.ShowDialog();
+                int employeeID;
+                if (int.TryParse(Employee.Text, out employeeID))
+                {
+                    SetLoggedInEmployeeID((int) employeeID);
+                    FrmDeveloper employee = new FrmDeveloper();
+                    employee.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid employee ID. Please enter a valid employee ID.");
+                }
+
+
+                //FrmDeveloper employee = new FrmDeveloper();
+              //employee.ShowDialog();
+
             }
         }
 

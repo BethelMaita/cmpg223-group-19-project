@@ -88,7 +88,9 @@ namespace cmpg223_project
             {
                 conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bethel\Documents\@NWU\SECOND SEMESTER\CMPG223\final project\cmpg223 project\DevTrackerDB.mdf"";Integrated Security=True");
                 conn.Open();
-                command = new SqlCommand("Insert into Emplyees Values(" + employeeID + ", ' " + employeeFname+ "', '" + employeeLName + "', '" + employeeCellnr + "', '" + empEmail + "') ", conn);
+                command = new SqlCommand("Insert into Emplyees Values(" + employeeID + "," +
+                    " ' " + employeeFname+ "', '" + employeeLName + "', '" + employeeCellnr + "', " +
+                    "'" + empEmail + "') ", conn);
 
                 adapter = new SqlDataAdapter();
                 adapter.InsertCommand = command;
@@ -122,7 +124,8 @@ namespace cmpg223_project
             {
                 conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Bethel\Documents\@NWU\SECOND SEMESTER\CMPG223\final project\cmpg223 project\DevTrackerDB.mdf"";Integrated Security=True");
                 conn.Open();
-                command = new SqlCommand("Insert into Clients Values(" + clientID + ", ' " + companyname + "', '" + clientEmail + "', '" + clientCellnr+ "', '" +cleintFname+ "' , '" +clientLName+ "') ", conn);
+                command = new SqlCommand("Insert into Clients Values(" + clientID + ", ' " + companyname + "'," +
+                    " '" + clientEmail + "', '" + clientCellnr+ "', '" +cleintFname+ "' , '" +clientLName+ "') ", conn);
 
                 adapter = new SqlDataAdapter();
                 adapter.InsertCommand = command;
